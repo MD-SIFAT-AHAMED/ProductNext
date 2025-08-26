@@ -54,10 +54,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { href: "/", label: "Home", icon: "🏠" },
-    { href: "/Products", label: "Products", icon: "🛍️" },
+    { href: "/", label: "Home", },
+    { href: "/Products", label: "Products", },
     ...(session
-      ? [{ href: "/dashboard/AddProduct", label: "Add Product", icon: "➕" }]
+      ? [{ href: "/dashboard/AddProduct", label: "Add Product",  }]
       : []),
   ];
 
@@ -76,25 +76,10 @@ const Navbar = () => {
             href="/"
             className="flex items-center space-x-3 group transition-transform duration-300 hover:scale-105"
           >
-            <div className="relative">
-              <img
-                src="https://i.ibb.co.com/N6tYs6hX/logo.png"
-                className="h-8 lg:h-10 w-auto transition-transform duration-300 group-hover:rotate-12"
-                alt="Gadget Finder Logo"
-                onError={(e) => {
-                  e.target.src =
-                    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%234F46E5'/%3E%3Ctext x='20' y='25' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3EGF%3C/text%3E%3C/svg%3E";
-                }}
-              />
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
-            </div>
             <div className="hidden sm:block">
               <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent">
-                Gadget Finder
+                Product Next
               </span>
-              <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                Discover Amazing Tech
-              </div>
             </div>
           </Link>
 
@@ -111,7 +96,7 @@ const Navbar = () => {
                 }`}
               >
                 <span className="flex items-center space-x-2">
-                  <span className="text-sm">{link.icon}</span>
+
                   <span>{link.label}</span>
                 </span>
                 {isActiveLink(link.href) && (

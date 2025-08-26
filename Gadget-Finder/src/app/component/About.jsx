@@ -183,7 +183,7 @@ export default function About() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 sm:p-12 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl p-8 sm:p-12 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
